@@ -111,7 +111,7 @@ Set convenience variables for this terminal:
 
 ```bash
 export AWS_PROFILE=dynamodb-student
-export AWS_REGION=ap-south-1
+export AWS_REGION=ap-southeast-2
 export TABLE_NAME=StudentsLab
 ```
 
