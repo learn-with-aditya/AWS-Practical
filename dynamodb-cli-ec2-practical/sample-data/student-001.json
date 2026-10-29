@@ -1,0 +1,6 @@
+{
+  "student_id": {"S": "STU001"},
+  "name": {"S": "Aarav Sharma"},
+  "course": {"S": "AWS"},
+  "score": {"N": "85"}
+}
