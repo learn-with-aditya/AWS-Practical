@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="500" viewBox="0 0 1400 500">
+<defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12z" fill="#334155"/></marker></defs>
+<rect width="1400" height="500" fill="#f8fafc"/>
+<text x="700" y="55" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle" fill="#0f172a">Outbound packet flow</text>
+<g font-family="Arial" text-anchor="middle">
+<rect x="35" y="170" width="220" height="130" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="145" y="220" font-size="22" font-weight="bold" fill="#1e40af">Private EC2</text><text x="145" y="255" font-size="17" fill="#1e40af">10.10.2.x</text>
+<rect x="320" y="170" width="220" height="130" rx="16" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/><text x="430" y="220" font-size="22" font-weight="bold" fill="#991b1b">Private RT</text><text x="430" y="255" font-size="17" fill="#991b1b">0.0.0.0/0 → NAT</text>
+<rect x="605" y="170" width="220" height="130" rx="16" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/><text x="715" y="220" font-size="22" font-weight="bold" fill="#9a3412">NAT Gateway</text><text x="715" y="255" font-size="17" fill="#9a3412">Source NAT + EIP</text>
+<rect x="890" y="170" width="220" height="130" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="1000" y="220" font-size="22" font-weight="bold" fill="#166534">Internet Gateway</text><text x="1000" y="255" font-size="17" fill="#166534">Public IP mapping</text>
+<rect x="1175" y="170" width="190" height="130" rx="16" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/><text x="1270" y="220" font-size="22" font-weight="bold" fill="#075985">Internet</text><text x="1270" y="255" font-size="17" fill="#075985">HTTPS service</text>
+</g>
+<g stroke="#334155" stroke-width="4" fill="none" marker-end="url(#arr)"><path d="M255 235 H310"/><path d="M540 235 H595"/><path d="M825 235 H880"/><path d="M1110 235 H1165"/></g>
+<text x="700" y="385" font-family="Arial" font-size="21" text-anchor="middle" fill="#334155">Response traffic follows the established NAT mapping back to the private instance.</text>
+<text x="700" y="425" font-family="Arial" font-size="18" text-anchor="middle" fill="#64748b">NAT Gateway permits return traffic for outbound-initiated connections; it does not expose the private EC2 to unsolicited inbound connections.</text>
+</svg>
